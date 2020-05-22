@@ -1,0 +1,30 @@
+import java.util.Scanner;
+class Section7_20 {
+	public static void main(String[] args) {
+		Scanner stdIn=new Scanner(System.in);
+		System.out.print("óvëfêîÅF");
+		int n=stdIn.nextInt();
+		int[] a=new int[n];
+		for(int i=0;i<n;i++){
+			System.out.print("a["+i+"]ÅF");
+			a[i]=stdIn.nextInt();
+		}
+		System.out.print("ë}ì¸Ç∑ÇÈóvëfÇÕÅF");
+		int idx=stdIn.nextInt();
+		System.out.print("ë}ì¸Ç∑ÇÈílÅF");
+		int x=stdIn.nextInt();
+		aryIns(a,idx,x);
+		System.out.println("a["+idx+"]Ç…"+x+"Çë}ì¸ÇµÇ‹ÇµÇΩ");
+		for(int j=0;j<n;j++){
+			System.out.println("a["+j+"]="+a[j]);
+		}
+	}
+	
+	static void aryIns(int[] a,int idx,int x){
+		for(int i=a.length-1;i>idx;i--){
+			a[i]=a[i-1];
+		}
+		a[idx]=x;
+	}	
+	
+}
